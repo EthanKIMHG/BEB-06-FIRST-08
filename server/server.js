@@ -11,3 +11,5 @@ app.get("*",(req,rep)=>{
     rep.sendFile(path.join("../client/","build/index.html"));
     
 });
+//라우터
+require("./routes/routes.js")(app);
