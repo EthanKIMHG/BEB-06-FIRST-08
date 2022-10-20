@@ -1,7 +1,9 @@
+const {nftupload} =require("./api/nftupload.js")
 const express = require("express");
 const path =require("path");
 const app = express();
 const port = 5000;
+
 
 app.use(express.static(path.join("../client/","build")));
 app.listen(port,()=>{
@@ -11,3 +13,7 @@ app.get("*",(req,rep)=>{
     rep.sendFile(path.join("../client/","build/index.html"));
     
 });
+
+nftupload();
+//라우터
+require("./routes/routes.js")(app);
