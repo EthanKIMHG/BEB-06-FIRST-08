@@ -1,5 +1,4 @@
-
-const {conn}=require('../DB_Connect/db.js');
+const {conn}=require('../Connect/db.js');
 
 const nftload=(req,res)=>{
     // res.send('성공성공');
@@ -9,7 +8,7 @@ const nftload=(req,res)=>{
         console.log(result);
         res.send({"data":result});
     })
-}
+};
 
 module.exports={
     nftload,
