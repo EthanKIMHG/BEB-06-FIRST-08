@@ -4,7 +4,7 @@ import { BsWallet2 as WalletIcon } from "react-icons/bs";
 import { BsCart as CartIcon } from "react-icons/bs";
 import { BsSearch } from "react-icons/bs";
 import "../utils/Header.css"
-import "../utils/Media.css"
+import { NavLink } from 'react-router-dom';
 import axios from 'axios'
 
 function Header() {
@@ -79,7 +79,7 @@ function Header() {
             </div>
           </div>
           <ul className="nav-link">
-            <div className="fresnel-container fresnel-greaterThanOrEqual-xl link-container">
+            <div className="fresnel-container fresnel-greaterThanOrEqual-xl">
               <div className="link-wrapper">
                 <li className="link-wrapper-explore" aria-expanded="false">
                   <a className="explore-link" href="/explore-collections">Explore</a>
@@ -91,12 +91,11 @@ function Header() {
                   <a className="resources-link" href="/explore-collections">Resources</a>
                 </li>
                 <li className="link-wrapper-create" aria-expanded={false}>
-                  <a className="create-link" href="/explore-collections">Create</a>
+                  <NavLink to="/create" className="create-link" href="/explore-collections">Create</NavLink>
                 </li>
               </div>
             </div>
             <div className='fresnel-container fresnel-greaterThanOrEqual-lg'>
-
               <div className="icon-wrapper">
                 <div className="icon-block-account">
                   <li className="account-wrapper" aria-expanded="false">

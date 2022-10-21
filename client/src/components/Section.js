@@ -10,11 +10,11 @@ function Section() {
     <main id="main">
       <div class="section">
         <div className='section-grid'> {/*gird를 기준으로 section이 나눔.*/}
-          {/*           <Section1 />
+          <Section1 />
+          {/*
           <Section2 />
           <Section3 />
           <Section4 /> */}
-          <Section1 />
         </div>
       </div>
     </main>
