@@ -1,0 +1,45 @@
+.main {
+  font-family: Poppins, sans-serif;
+  line-height: 1.5;
+  font-size: 15px;
+  --swiper-theme-color: #007aff;
+  --swiper-navigation-size: 44px;
+  color: rgb(229, 232, 235);
+  box-sizing: border-box;
+  flex: 1 1 0%;
+  display: flex;
+  flex-direction: column;
+}
+
+.section {
+  font-family: Poppins, sans-serif;
+  line-height: 1.5;
+  font-size: 15px;
+  --swiper-theme-color: #007aff;
+  --swiper-navigation-size: 44px;
+  color: rgb(229, 232, 235);
+  box-sizing: border-box;
+  height: 100%;
+  flex: 1 1 0%;
+  display: flex;
+  flex-direction: column;
+}
+
+.section-grid {
+  font-family: Poppins, sans-serif;
+  line-height: 1.5;
+  font-size: 15px;
+  --swiper-theme-color: #007aff;
+  --swiper-navigation-size: 44px;
+  color: rgb(229, 232, 235);
+  box-sizing: border-box;
+  margin-bottom: 40px;
+  --template-grid-row-gap: 8px;
+  --template-grid-column-gap: 8px;
+  --template-num-columns: 12;
+  display: grid;
+  grid-template-columns: repeat(var(--template-num-columns), 1fr);
+  grid-column-gap: var(--template-grid-column-gap);
+  --template-grid-gap: 24px;
+  row-gap: 50px;
+}

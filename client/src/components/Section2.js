@@ -1,10 +1,11 @@
 import React from 'react'
+import "../utils/Section2.css"
 
 function Section2() {
   return (
-    <div class="section-2">
-      <div class="stats">
-        <div class="navigation">
+    <div className="section-2">
+      <div className="stats">
+        <div className="navigation">
           <nav overflow="hidden">
             <ul direction="horizontal">
               <div>
@@ -12,19 +13,19 @@ function Section2() {
                 <li>Top</li>
               </div>
             </ul>
-            <div class="hours-and-view">
+            <div className="hours-and-view">
               <button>
                 <input type="hidden" value="24h" />
-                <div class="hours-options">
-                  <span class="hours-chosen"></span>
+                <div className="hours-options">
+                  <span className="hours-chosen"></span>
                 </div>
-                <div class="arrow-down">
+                <div className="arrow-down">
                   <i cursor="pointer" value="keyboard_arrow_down" size="24">keyboard_arrow_down</i>
                 </div>
               </button>
             </div>
-            <div class="view-all">
-              <a href="/rankings" class="">
+            <div className="view-all">
+              <a href="/rankings" className="">
                 <button type="button" name="button">
                   <span>View all</span>
                 </button>
@@ -33,63 +34,63 @@ function Section2() {
           </nav>
         </div>
         <div>
-          <div class="collection-left">
-            <div class="collection-info">
-              <div width="60%" display="flex" class="">
+          <div className="collection-left">
+            <div className="collection-info">
+              <div width="60%" display="flex" className="">
                 <span color="text.subtle">COLLECTION</span>
               </div>
-              <div width="20%" display="flex" class="">
+              <div width="20%" display="flex" className="">
                 <span color="text.subtle">FLOOR PRICE</span>
               </div>
-              <div width="20%" display="flex" class="">
+              <div width="20%" display="flex" className="">
                 <span color="text.subtle">VOLUME</span>
               </div>
             </div>
-            <div class="collection-items">
+            <div className="collection-items">
               <div role="list-item">
-                <a class="item"></a>
+                <a className="item"></a>
               </div>
               <div role="list-item">
-                <a class="item"></a>
+                <a className="item"></a>
               </div>
               <div role="list-item">
-                <a class="item"></a>
+                <a className="item"></a>
               </div>
               <div role="list-item">
-                <a class="item"></a>
+                <a className="item"></a>
               </div>
               <div role="list-item">
-                <a class="item"></a>
+                <a className="item"></a>
               </div>
             </div>
           </div>
-          <div class="collection-right">
-            <div class="collection-info">
-              <div width="60%" display="flex" class="">
+          <div className="collection-right">
+            <div className="collection-info">
+              <div width="60%" display="flex" className="">
                 <span color="text.subtle">COLLECTION</span>
               </div>
-              <div width="20%" display="flex" class="">
+              <div width="20%" display="flex" className="">
                 <span color="text.subtle">FLOOR PRICE</span>
               </div>
-              <div width="20%" display="flex" class="">
+              <div width="20%" display="flex" className="">
                 <span color="text.subtle">VOLUME</span>
               </div>
             </div>
-            <div class="collection-items">
+            <div className="collection-items">
               <div role="list-item">
-                <a class="item"></a>
+                <a className="item"></a>
               </div>
               <div role="list-item">
-                <a class="item"></a>
+                <a className="item"></a>
               </div>
               <div role="list-item">
-                <a class="item"></a>
+                <a className="item"></a>
               </div>
               <div role="list-item">
-                <a class="item"></a>
+                <a className="item"></a>
               </div>
               <div role="list-item">
-                <a class="item"></a>
+                <a className="item"></a>
               </div>
             </div>
           </div>
