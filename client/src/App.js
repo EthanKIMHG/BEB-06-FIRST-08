@@ -6,16 +6,17 @@ import Section2 from './components/Section2';
 import Section3 from './components/Section3';
 import Section4 from './components/Section4';
 import MainPage from './pages/MainPage';
-
+import { Routes, Route } from "react-router-dom";
+import CreatePage from './pages/CreatePage';
 
 
 function App() {
 
   return (
-    <>
-      <Header />
-      <Section1 />
-    </>
+    <Routes>
+      <Route path='/' element={<MainPage />} />
+      <Route path='/create' element={<CreatePage />} />
+    </Routes>
   )
 }
 
