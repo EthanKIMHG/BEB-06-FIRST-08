@@ -23,7 +23,7 @@
   width: 100%;
   max-width: 2560px;
   height: 100%;
-  padding: 0px 64px;
+  padding: 0px 72px;
 }
 
 /**nav START**/
@@ -213,6 +213,10 @@
   cursor: text;
 }
 
+::placeholder {
+  color: white
+}
+
 /*nav SEARCH END*/
 
 /*nav LINK START*/
@@ -231,6 +235,7 @@
   display: flex;
   flex-shrink: 0;
   margin: 0px;
+  padding: 0;
 }
 
 .link-wrapper {
@@ -244,6 +249,7 @@
   list-style-type: none;
   box-sizing: border-box;
   display: flex;
+  margin: 0;
 }
 
 .link-wrapper-explore {
@@ -721,3 +727,5 @@
   transform: translate3d(100%, 0px, 0px);
   opacity: 0;
 }
+
+/* nav ICON END*/
