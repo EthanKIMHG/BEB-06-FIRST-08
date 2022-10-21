@@ -127,7 +127,6 @@ function Header() {
                 <div className="fresnel-container fresnel-lessThan-lg "></div>
               </div>
             </div>
-
             <div class="fresnel-container fresnel-between-lg-xl "></div>
             <div class="fresnel-container fresnel-between-sm-lg "></div>
             <li>
