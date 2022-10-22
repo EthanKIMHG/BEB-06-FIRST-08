@@ -19,30 +19,16 @@ function Section1() {
             <div className="background-grid">
               <div className='background-container'>
                 <div className='background-wrapper'>
-                  <img src='https://media.istockphoto.com/photos/sonoran-sunset-picture-id1296913338?k=20&m=1296913338&s=612x612&w=0&h=6U0r8rlHTVnOrY3WbJabcm-PWR6ekJif8WMU78giotE=' style={{ width: "50%" }} />
+                  <div className='fresnel-container fresnel-lessThanOrEqual-xxl'>
+                    <div className='background-row' style={{display: "flex", justifyContent: "center", height: "50%"}}>
+                      <img src="https://w0.peakpx.com/wallpaper/652/786/HD-wallpaper-arid-desert-landscape-at-twilight-sky-clouds-cactus-twilight-deserts-sunsets-nature.jpg" style={{ display: "block", width: "auto", height:"auto", borderRadius:"10px"}} />
+                      <img src="https://w0.peakpx.com/wallpaper/652/786/HD-wallpaper-arid-desert-landscape-at-twilight-sky-clouds-cactus-twilight-deserts-sunsets-nature.jpg" style={{ display: "block", width: "auto", height:"auto", borderRadius:"10px"}} />
+                    </div>
+                  </div>
                 </div>
               </div>
-              <button className="swiper-nav-left"></button>
               <div className="swiper swiper-initialized swiper-horizontal swiper-pointer-events home-header-swiper">
-                {/*<div className="swiper-wrapper">
-                  <div className="swiper-slide">
-                    <a className="swiper-nft"></a>
-                  </div>
-                  <div className="swiper-slide">
-                    <a className="swiper-nft"></a>
-                  </div>
-                  <div className="swiper-slide">
-                    <a className="swiper-nft"></a>
-                  </div>
-                  <div className="swiper-slide">
-                    <a className="swiper-nft"></a>
-                  </div>
-                  <div className="swiper-slide">
-                    <a className="swiper-nft"></a>
-                  </div>
-                </div> */}
               </div>
-              <button className="swiper-nav-right"></button>
             </div>
           </div>
         </div>
