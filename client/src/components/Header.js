@@ -7,10 +7,9 @@ import "../utils/Header.css"
 import { NavLink } from 'react-router-dom';
 import axios from 'axios'
 
-function Header() {
+function Header({ handleWalletClick }) {
   const [address, setAddress] = useState('');
-  const [nftList, setNftList] = useState([]);
-
+  //const [nftList, setNftList] = useState([]);
   // 처음 렌더링 될때만 실행하게끔. DB에서 데이터를 불러온다.
   /*   useEffect((req, res) => {
       // nftLoad
@@ -18,18 +17,16 @@ function Header() {
     }, []); */
 
   //검색할때 리스트 안에서 nftList 안에서 필터링.
-  // 필터링 한 
+  // 필터링 한
 
   const handleChange = (e) => {
     setAddress(e.target.value)
-  }
-
+  };
 
   // 기능
   // mainPage에서 처음에, DB에서 리스트 불러오기. useEffect
   // list 받아서 useState에 넣어놓기 useEffect함수 안에
   // mainPage에서 section부분에 전달.
-
 
   //서버로 address값 req 로 보내기
   const handleSubmit = async (e) => {
@@ -44,12 +41,8 @@ function Header() {
       return e;
     }
   }
-
+  // 장바구니로 이동.
   const handleCartClick = () => {
-    // 장바구니로 이동.
-  }
-  const handleWalletClick = () => {
-    //wallet connect 기능 구현
   }
 
   return (
