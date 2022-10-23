@@ -13,19 +13,19 @@ function App() {
   //연결된 account의 주소값.
   const [account, setAccount] = useState('')
   const [collectionList, setCollectionList] = useState([]);
-  const [web3, setWeb3] = useState();
+  // const [web3, setWeb3] = useState();
 
 
-  useEffect(() => {
-      if (typeof window.ethereum !== "undefined") { // window.ethereum이 있다면
-          try {
-              const web = new Web3(window.ethereum);  // 새로운 web3 객체를 만든다
-              setWeb3(web);
-          } catch (err) {
-              console.log(err);
-          }
-      }
-    }, []);
+  // useEffect(() => {
+  //     if (typeof window.ethereum !== "undefined") { // window.ethereum이 있다면
+  //         try {
+  //             const web = new Web3(window.ethereum);  // 새로운 web3 객체를 만든다
+  //             setWeb3(web);
+  //         } catch (err) {
+  //             console.log(err);
+  //         }
+  //     }
+  //   }, []);
 
 
   //첫 페이지 렌더링시 NFT 리스트 가져오기. 그리고 collectionList를 하위 컴포넌트로 보냅니다.

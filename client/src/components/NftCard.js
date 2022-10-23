@@ -41,10 +41,10 @@ function KitchenSinkExample() {
         <Form style={{padding: "0px 10px"}}>
           <Form.Group className="mb-3" controlId='exampleForm.ControlInput1' onChange={handleFormChange}>
             <Form.Label>Email address</Form.Label>
-            <Form.Control name="id" type='text' placeholder='id' ></Form.Control>
+            {/* <Form.Control name="id" type='text' placeholder='id' ></Form.Control> */}
             <Form.Control name="name" type='text' placeholder='name' ></Form.Control>
-            <Form.Control name="creator" type='text' placeholder='creator'></Form.Control>
-            <Form.Control name="holder"type='text' placeholder='holder'></Form.Control>
+            {/* <Form.Control name="creator" type='text' placeholder='creator'></Form.Control>
+            <Form.Control name="holder"type='text' placeholder='holder'></Form.Control> */}
             <Form.Control name="price"type='text' placeholder='price'></Form.Control>
             <Form.Control name="description"type='text' placeholder='description'></Form.Control>
             <Form.Control name="attribute"type='text' placeholder='attribute'></Form.Control>
