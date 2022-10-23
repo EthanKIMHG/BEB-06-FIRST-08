@@ -1,9 +1,11 @@
 import React, { useState, useRef } from 'react'
+import axios from 'axios';
 
 const UploadImg = () => {
   const inputFile = useRef(null)
   const [imgFile, setImgFile] = useState(''); 
-  console.log(imgFile)
+  console.log(imgFile) // imgFile 을 보내면 될거같고.
+
   const handleImage = (e) => {
     if (!e.target.files[0]) {
       return;

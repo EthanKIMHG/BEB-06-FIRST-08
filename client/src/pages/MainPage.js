@@ -3,11 +3,12 @@ import Header from '../components/Header'
 import Section from '../components/Section'
 import Footer from '../components/Footer'
 
-function MainPage({handleWalletClick, account}) {
+
+function MainPage({handleWalletClick, account, collectionList}) {
   return (
     <>
       <Header handleWalletClick={handleWalletClick} account={account} />
-      <Section />
+      <Section collectionList={collectionList}/>
       {/* <Footer /> */}
     </>
   )

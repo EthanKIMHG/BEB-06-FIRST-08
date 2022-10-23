@@ -1,5 +1,4 @@
 import React, { useState, useRef } from 'react'
-import Create from '../components/Create';
 import Header from '../components/Header';
 import NftCard from '../components/NftCard'
 import UploadImg from '../components/UploadImg';
@@ -22,7 +21,7 @@ function CreatePage({handleWalletClick, account}) {
   const [url, setUrl] = useState('');
   const [description, setDescription] = useState('');
   const [attribute, setAttrubute] = useState('');
-  
+
   return (
     <>
       <Header handleWalletClick={handleWalletClick}/>

@@ -3,7 +3,6 @@ import ListGroup from 'react-bootstrap/ListGroup';
 
 function KitchenSinkExample({id, name, creator, holder, price, url, description, attribute}) {
   
-  
   return (
     <Card style={{width: "18vw", border: "none", marginBottom: "50px"}}>
       <Card.Img variant="top" src="https://images.pexels.com/photos/6223187/pexels-photo-6223187.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" style={{height: "250px"}}/> {/* url이겠지요?? */}

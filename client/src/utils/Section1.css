@@ -149,3 +149,18 @@
 }
 
 /* section1 BACKGROUND GRID*/
+
+.background-row {
+  display: flex;
+  justify-content: center;
+  height: 21vw;
+  width: 100%;
+}
+
+img {
+
+  width: auto;
+  height: auto;
+  border-radius: 10px;
+  margin: 0 3px
+}
