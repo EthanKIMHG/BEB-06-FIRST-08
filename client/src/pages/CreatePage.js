@@ -1,7 +1,6 @@
 import React, { useState, useRef } from 'react'
 import Header from '../components/Header';
 import NftCard from '../components/NftCard'
-import UploadImg from '../components/UploadImg';
 import axios from 'axios'
 
 //IPFS 를 사용하는법
@@ -13,29 +12,12 @@ import axios from 'axios'
 //nft.strorage 를 이용해서 만드는 방법.
 
 function CreatePage({handleWalletClick, account}) {
-  const [id, setId] = useState('');
-  const [name, setName] = useState('');
-  const [creator, setCreator] = useState('');
-  const [holder, Setholder] = useState('');
-  const [price, setPrice] = useState('');
-  const [url, setUrl] = useState('');
-  const [description, setDescription] = useState('');
-  const [attribute, setAttrubute] = useState('');
 
   return (
     <>
       <Header handleWalletClick={handleWalletClick}/>
       <div style={{display: "flex", flexDirection:"column", justifyContent: "center", alignItems:"center", marginTop:"130px" }}>
-        <NftCard
-            id={id}
-            name={name}
-            creator={creator}
-            holder={holder}
-            price={price}
-            url={url}
-            description={description}
-            attribute={attribute}/>
-        <UploadImg />
+        <NftCard />
         <span style={
             {
               fontFamily: "Poppins",
