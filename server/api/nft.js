@@ -2,7 +2,6 @@ const {conn}=require('../Connect/db.js');
 
 const nftload=(req,res)=>{
     // res.send('성공성공');
-
     conn.query("select * from nft",(err,result)=>{
         if(err) throw err;
         console.log(result);
@@ -10,13 +9,16 @@ const nftload=(req,res)=>{
     });
 };
 const mint=(req,res)=>{
-    console.log(req.body.data);
-    conn.query("",(err,result)=>{
-        
+    const data=req.body;
+    const sql="insert into nft(name,creator,holder,price,url,description,attribute,image) values (?)";
+    const values =[data.name,data.account,data.account,data.price,data.url,data.description,data.attribute,data.image];
+    conn.query(sql,[values],(err,result)=>{
+        if(err) console.log(err);
+        console.log('데이터 저장 성공');
+        res.send("성공입니다.");
     });
-    res.send("성공");
+   
 }
-
 
 module.exports={
     nftload,
