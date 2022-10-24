@@ -3,6 +3,7 @@ import {NFTStorage,File} from 'nft.storage';
 import abi from '../abi.json';
 import axios from 'axios';
 import Web3 from 'web3';
+import "../utils/Font.css"
 
 const web3 = window.ethereum ? new Web3(window.ethereum) : null; 
 const contract = web3 ? new web3.eth.Contract(abi,'0x155cBa278fC69f4E4D91CD35cfCab2174721c7c6'):null;
@@ -45,8 +46,9 @@ const UploadImg = ({contact, imageSrc}) => {
   };
 
   return (
-    <div>
-      <button label="업로드" onClick={handleImagebutton}>Mint</button>
+    <div style={{marginTop: "30px", border:"none", textAlign:"center", color:"white"}}>
+      <p>파일 선택시 이미지가 위에 표시됩니다.</p>
+      <button style={{fontFamiliy:"Poppins, sans-serif", borderRadius:"5px", backgroundColor: "#fcc866", width: "100px"}} label="업로드" onClick={handleImagebutton}>Mint</button>
     </div>
   )
 }

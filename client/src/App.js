@@ -2,16 +2,16 @@ import react, {useState, useEffect, useContext, createContext} from 'react';
 import MainPage from './pages/MainPage';
 import { Routes, Route } from "react-router-dom";
 import CreatePage from './pages/CreatePage';
-
+import AccountPage from './pages/AccountPage';
 import Web3 from 'web3';
 import axios from "axios"
 import { AppContext } from './AppContext';
+
 // MainPage에 넘겨줄 db list
 // 여기에 만들면, page별로 다 뿌릴 수 있다.
 
 
 function App() {
-
   //연결된 account의 주소값.
   const [account, setAccount] = useState('')
   const [collectionList, setCollectionList] = useState('');
@@ -40,7 +40,6 @@ function App() {
     }).catch(e => {console.log(e)})
   },[])
 
-
   //wallet connect 기능
   const handleWalletClick = async () => {
     let accounts = await window.ethereum.request({
@@ -53,8 +52,9 @@ function App() {
   return (
     <AppContext.Provider value={context}>
       <Routes>
-        <Route path='/'element={ <MainPage handleWalletClick={handleWalletClick}/>}/>
+        <Route path='/' element={ <MainPage handleWalletClick={handleWalletClick}/>}/>
         <Route path='/create' element={<CreatePage handleWalletClick={handleWalletClick}/>}/>
+        <Route path='/account' element={<AccountPage handleWalletClick={handleWalletClick}/>} />
       </Routes>
     </AppContext.Provider>
   )

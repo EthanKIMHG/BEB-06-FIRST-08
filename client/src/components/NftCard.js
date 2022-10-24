@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Card from 'react-bootstrap/Card';
 import Form from 'react-bootstrap/Form';
 import UploadImg from "./UploadImg"
+import "../utils/NftCard.css"
 
 
 function KitchenSinkExample() {
@@ -28,17 +29,17 @@ function KitchenSinkExample() {
   }
 
   return (
-    <div style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
-      <Card style={{width:"22vw", border: "none", marginTop:"-20px", width:"auto", height:"auto"}}>
-        <Card.Img variant="top" src={imageSrc} style={{width: "auto%",height: "350px" }}/> {/* url이겠지요?? */}
+    <div style={{display: "flex", justifyContent: "center", flexDirection:"column", alignItems: "center"}}>
+      <Card className="card"style={{width:"22vw", border: "none", marginTop:"-20px", width:"auto", height:"auto"}}>
+        <Card.Img variant="top" src={imageSrc} style={{width: "auto",height: "350px" }}/>
         <Card.Body>
-          <Card.Title style={{color: "#c8508b"}}>
+          <Card.Title style={{color: "white", textAlign:'center'}}>
             여러분의 NFT를 직접 만드세요!
           </Card.Title>
         </Card.Body>
         <Form style={{padding: "0px 10px"}}>
           <Form.Group className="mb-3" controlId='exampleForm.ControlInput1' onChange={handleFormChange}>
-            <Form.Label>NFT 속성</Form.Label>
+            <Form.Label></Form.Label>
             {/* <Form.Control name="id" type='text' placeholder='id' ></Form.Control> */}
             <Form.Control name="name" type='text' placeholder='name' ></Form.Control>
             {/* <Form.Control name="creator" type='text' placeholder='creator'></Form.Control>
