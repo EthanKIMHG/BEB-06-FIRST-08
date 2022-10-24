@@ -3,15 +3,18 @@ import {NFTStorage,File} from 'nft.storage';
 import abi from '../abi.json';
 import axios from 'axios';
 import Web3 from 'web3';
+import Loading from '../Loding/Loading';
+import Swal from 'sweetalert2';
 
 const web3 = window.ethereum ? new Web3(window.ethereum) : null; 
 const contract = web3 ? new web3.eth.Contract(abi,'0x155cBa278fC69f4E4D91CD35cfCab2174721c7c6'):null;
 const client = new NFTStorage({ token:'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweGU3MmYyYzMyMUUzZmEwMmU4MDlkODFhYWJhOWRFMjg3NjNGMUEyNWIiLCJpc3MiOiJuZnQtc3RvcmFnZSIsImlhdCI6MTY2NjUwMTY1ODM0MCwibmFtZSI6InNpbnN1In0.BlSLUWAZMaXtDKs43HTrxBhypSTcU-gSIFee-nRME18'});
 
 const UploadImg = ({contact, imageSrc}) => {
-
+ 
+  const [loading,setLoading] = useState(false);
   const handleImagebutton = async() => {
-
+    setLoading(true);
     contact.image=new File([imageSrc],{type:'image/jpg'});
     const metadata=contact;
     try {
@@ -34,6 +37,15 @@ const UploadImg = ({contact, imageSrc}) => {
       })
       .then((res)=>{
         console.log(res);
+        setLoading(false);
+        Swal.fire({
+          position: 'top-end',
+          icon: 'success',
+          title: 'Your work has been saved',
+          showConfirmButton: false,
+          timer: 3000
+        })
+        window.location.replace("/create");
       }).catch(err=>{
         console.log(err);
       });
@@ -46,6 +58,7 @@ const UploadImg = ({contact, imageSrc}) => {
 
   return (
     <div>
+      {loading ? <Loading/> : null}
       <button label="업로드" onClick={handleImagebutton}>Mint</button>
     </div>
   )
