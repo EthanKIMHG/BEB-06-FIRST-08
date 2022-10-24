@@ -35,8 +35,7 @@ function App() {
   useEffect(() => {
     axios.post("http://localhost:5001/call/nftload")
     .then(res => {
-      const data = res.data;
-      console.log(res.data)
+      const data =res.data.data;
       setCollectionList(data);
     }).catch(e => {console.log(e)})
   },[])
