@@ -1,14 +1,17 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import { VscAccount as AccountIcon } from "react-icons/vsc";
 import { BsWallet2 as WalletIcon } from "react-icons/bs";
 import { BsCart as CartIcon } from "react-icons/bs";
 import { BsSearch } from "react-icons/bs";
 import "../utils/Header.css"
 import { NavLink } from 'react-router-dom';
+import { AppContext } from '../AppContext';
 import axios from 'axios'
 
-function Header({ handleWalletClick }) {
+function Header() {
   const [address, setAddress] = useState('');
+  const context = useContext(AppContext);
+  console.log(context)
   //const [nftList, setNftList] = useState([]);
   // 처음 렌더링 될때만 실행하게끔. DB에서 데이터를 불러온다.
   /*   useEffect((req, res) => {
@@ -100,7 +103,7 @@ function Header({ handleWalletClick }) {
                 <div className="icon-block-wallet">
                   <li className="wallet-wrapper">
                     <div className="wallet-connect" style={{ width: "100%" }}>
-                      <button className="wallet" type="button" onClick={handleWalletClick}>
+                      <button className="wallet" type="button" onClick={context.action.handleWalletClick}>
                         <WalletIcon className="wallet-icon" size="32" title="Wallet" value="account_balance_wallet" />
                       </button>
                     </div>

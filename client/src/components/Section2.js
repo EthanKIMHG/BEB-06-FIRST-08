@@ -6,7 +6,7 @@ import { AppContext } from '../AppContext'
 
 function Section2() {
   const context = useContext(AppContext);
-  const collections = context.collectionList;
+  const collections = context.state.collectionList;
   const collectionLeft = [...collections].slice(0,5);
   const collectionRight = [...collections].slice(5,10);
   

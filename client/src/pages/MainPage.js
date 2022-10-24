@@ -4,10 +4,10 @@ import Section from '../components/Section'
 import Footer from '../components/Footer'
 
 
-function MainPage({handleWalletClick}) {
+function MainPage() {
   return (
     <>
-      <Header handleWalletClick={handleWalletClick}/>
+      <Header />
       <Section />
       {/* <Footer /> */}
     </>
