@@ -12,15 +12,15 @@ import axios from 'axios'
 
 //nft.strorage 를 이용해서 만드는 방법.
 
-function CreatePage({handleWalletClick}) {
+function CreatePage() {
   const context = useContext(AppContext)
 
   return (
     <>
-      <Header handleWalletClick={handleWalletClick}/>
+      <Header />
       <div style={{display: "flex", flexDirection:"column", justifyContent: "center", alignItems:"center", marginTop:"130px", marginBottom:"100px" }}>
         <span style={{color:"#FFFFFF", fontSize:"24px", textAlign:"center", paddingBottom: "5vw"}}>현재 당신의 계정은<br/>
-          <p style={{fontSize:"16px", paddingTop:"32px"}}>{context.account}</p>
+          <p style={{fontSize:"16px", paddingTop:"32px"}}>{context.state.account}</p>
         </span>
         <NftCard />
       </div>

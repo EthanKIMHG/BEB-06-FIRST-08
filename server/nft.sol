@@ -44,5 +44,4 @@ contract MyNFTs is ERC721URIStorage, Ownable {
         payable(_offer.oner).transfer(_offer.price);
         _transfer(_offer.oner,msg.sender,_tokenId);
     }
-
 }

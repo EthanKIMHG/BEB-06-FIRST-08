@@ -1,0 +1,17 @@
+.Account {
+  font-family: Poppins, sans-serif;
+  line-height: 1.5;
+  font-size: 15px;
+  --swiper-theme-color: #007aff;
+  --swiper-navigation-size: 44px;
+  color: rgb(229, 232, 235);
+  box-sizing: border-box;
+  height: 60vw; /* Account view*/ 
+  flex: 1 1 0%;
+  display: flex;
+  flex-direction: column;
+  background-position: 50% 50%;
+  background-size: cover;
+  margin-top: -72px;
+  padding-top: 72px;
+}

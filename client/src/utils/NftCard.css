@@ -1,0 +1,20 @@
+.card-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border: none;
+}
+
+.card {
+  background-color: #4562ff;
+  background-image: linear-gradient(360deg,#fcc766 0% ,  #c8508b 50%,  #4562ff 100%);
+  border-radius: 5px;
+  padding-bottom: 10px;
+  width: 24vw;
+  border: none;
+  margin-top: -20px;
+  width: auto;
+  height: auto;
+}
+
