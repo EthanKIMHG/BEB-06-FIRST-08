@@ -92,9 +92,9 @@ function Header({ handleWalletClick }) {
               <div className="icon-wrapper">
                 <div className="icon-block-account">
                   <li className="account-wrapper" aria-expanded="false">
-                    <a className="account-link" href="/account">
+                    <NavLink to="/account" className="account-link">
                       <AccountIcon className="nav-icon-account" size="32" title="Account" value="account_circle" />
-                    </a>
+                    </NavLink>
                   </li>
                 </div>
                 <div className="icon-block-wallet">

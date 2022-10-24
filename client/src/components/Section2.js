@@ -7,9 +7,9 @@ import { AppContext } from '../AppContext'
 function Section2() {
   const context = useContext(AppContext);
   const collections = context.collectionList;
-  console.log(collections);
+  const collectionLeft = [...collections].slice(0,5);
+  const collectionRight = [...collections].slice(5,10);
   
-
 
   return (
     <div className="section-2">
@@ -50,16 +50,17 @@ function Section2() {
               <div className='collection-left-wrapper'>
                 <InfoList />
                 <div className="collection-left-items">
-{/*                    {collections.map((item, idx) => {
+                   {collectionLeft.map((item, idx) => {
                     return (<Collections
                     className={`collection-item${idx}`}
                     key={idx}
-                    number={idx}
+                    number={idx+1}
                     name={item.name}
                     imageUrl={item.image}
                     holder={item.holder}
+                    price={item.price}
                     />)
-                  })} */}
+                  })}
 {/*                   <Collections className="collection-item1" number="1" url="" title="" value="" holder=""/>  
                   <Collections className="collection-item2" number="2" url="" title="" value="" holder=""/>  
                   <Collections className="collection-item3" number="3" url="" title="" value="" holder=""/>  
@@ -72,12 +73,17 @@ function Section2() {
               <div className='collection-right-wrapper'>
                 <InfoList />
                 <div className="collection-right-items">
-                  {/* 리스트오면 map으로 바꿀게요! */}
-                  {/* <Collections className="collection-item1" number="6" url="" title="" value="" holder=""/>
-                  <Collections className="collection-item2" number="7" url="" title="" value="" holder=""/>
-                  <Collections className="collection-item3" number="8" url="" title="" value="" holder=""/>
-                  <Collections className="collection-item4" number="9" url="" title="" value="" holder=""/>
-                  <Collections className="collection-item5" number="10" url="" title="" value="" holder=""/> */}
+                {collectionRight.map((item, idx) => {
+                    return (<Collections
+                    className={`collection-item${idx}`}
+                    key={idx}
+                    number={idx+6}
+                    name={item.name}
+                    imageUrl={item.image}
+                    holder={item.holder}
+                    price={item.price}
+                    />)
+                  })}
                 </div>
               </div>
             </div>

@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Collections({number, name, value, holder, imageUrl}) {
+function Collections({number, price, holder, imageUrl}) {
   return (
       <a className="item">
         <div className='item-container'>
@@ -24,7 +24,6 @@ function Collections({number, name, value, holder, imageUrl}) {
                   <div className='fresnel-container fresnel-greaterThanOrEqual-sm'>
                     <span className='item-title'>
                       <div className='item-title-only'>
-                        {name}
                       </div>
                     </span>
                   </div>
@@ -47,7 +46,7 @@ function Collections({number, name, value, holder, imageUrl}) {
               <div className='fresnel-container fresnel-greaterThanOrEqual-md'>
                 <span className='value-only'>
                   <div className='value-eth'>
-                    {value}
+                    {price}
                   </div>
                 </span>
               </div>
