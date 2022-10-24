@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Collections({number, title, value, holder}) {
+function Collections({number, name, value, holder, imageUrl}) {
   return (
       <a className="item">
         <div className='item-container'>
@@ -16,7 +16,7 @@ function Collections({number, title, value, holder}) {
             <div className='item-image-container'>
               <div className='item-image-wrapper'>
                 <span className='item-image'>
-                  <img className='item-image-only' src="https://i.seadn.io/gcs/files/1812d854711c186f5fd04f1404412065.png?auto=format&w=256" />
+                  <img className='item-image-only' src={imageUrl} />
                 </span>
               </div>
               <div className="item-title-container">
@@ -24,7 +24,7 @@ function Collections({number, title, value, holder}) {
                   <div className='fresnel-container fresnel-greaterThanOrEqual-sm'>
                     <span className='item-title'>
                       <div className='item-title-only'>
-                        titletitletitle
+                        {name}
                       </div>
                     </span>
                   </div>
@@ -37,7 +37,7 @@ function Collections({number, title, value, holder}) {
         <div className='holder-container'>
           <span className='holder-wrapper'>
             <div className='holder'>
-              holderhodler
+              {holder}
             </div>
           </span>
         </div>
@@ -47,7 +47,7 @@ function Collections({number, title, value, holder}) {
               <div className='fresnel-container fresnel-greaterThanOrEqual-md'>
                 <span className='value-only'>
                   <div className='value-eth'>
-                    110ETH
+                    {value}
                   </div>
                 </span>
               </div>
