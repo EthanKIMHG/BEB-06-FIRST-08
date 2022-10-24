@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react'
 import Header from '../components/Header';
 import NftCard from '../components/NftCard'
-import { AppContext } from '../App';
+import { AppContext } from '../AppContext'
 import axios from 'axios'
 
 //IPFS 를 사용하는법
@@ -14,7 +14,7 @@ import axios from 'axios'
 
 function CreatePage({handleWalletClick}) {
   const context = useContext(AppContext)
-  console.log(context)
+
   return (
     <>
       <Header handleWalletClick={handleWalletClick}/>

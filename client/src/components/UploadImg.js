@@ -27,7 +27,7 @@ const UploadImg = ({contact, imageSrc}) => {
       metadata.image=imageSrc;
       metadata.account=account[0];
       metadata.url = result.url;
-      axios.post('http://localhost:5000/call/mint',JSON.stringify(metadata),{
+      axios.post('http://localhost:5001/call/mint',JSON.stringify(metadata),{
         headers:{
           "Content-Type": 'application/json',
         },
