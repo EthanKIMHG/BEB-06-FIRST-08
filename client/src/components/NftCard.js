@@ -29,8 +29,8 @@ function KitchenSinkExample() {
   }
 
   return (
-    <div style={{display: "flex", justifyContent: "center", flexDirection:"column", alignItems: "center"}}>
-      <Card className="card"style={{width:"22vw", border: "none", marginTop:"-20px", width:"auto", height:"auto"}}>
+    <div className='card-container'>
+      <Card className="card">
         <Card.Img variant="top" src={imageSrc} style={{width: "auto",height: "350px" }}/>
         <Card.Body>
           <Card.Title style={{color: "white", textAlign:'center'}}>

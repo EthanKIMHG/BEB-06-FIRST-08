@@ -54,7 +54,7 @@ function Section2() {
                     return (<Collections
                     className={`collection-item${idx}`}
                     key={idx}
-                    number={idx}
+                    number={idx+1}
                     name={item.name}
                     imageUrl={item.image}
                     holder={item.holder}
@@ -77,7 +77,7 @@ function Section2() {
                     return (<Collections
                     className={`collection-item${idx}`}
                     key={idx}
-                    number={idx}
+                    number={idx+6}
                     name={item.name}
                     imageUrl={item.image}
                     holder={item.holder}
