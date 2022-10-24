@@ -2,9 +2,9 @@ require("dotenv").config();
 
 const mysql = require("mysql");
 const conn= mysql.createConnection({
-    host:'127.0.0.1',
+    host:process.env.IP,
     port:'3306',
-    user:'root',
+    user:'nft_user',
     password:process.env.PASSWORD,
     database:'nft'
 });
