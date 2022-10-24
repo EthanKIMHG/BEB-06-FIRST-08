@@ -9,9 +9,9 @@ const contract = web3 ? new web3.eth.Contract(abi,'0x155cBa278fC69f4E4D91CD35cfC
 const client = new NFTStorage({ token:'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweGU3MmYyYzMyMUUzZmEwMmU4MDlkODFhYWJhOWRFMjg3NjNGMUEyNWIiLCJpc3MiOiJuZnQtc3RvcmFnZSIsImlhdCI6MTY2NjUwMTY1ODM0MCwibmFtZSI6InNpbnN1In0.BlSLUWAZMaXtDKs43HTrxBhypSTcU-gSIFee-nRME18'});
 
 const UploadImg = ({contact, imageSrc}) => {
-  
+
   const handleImagebutton = async() => {
-    
+
     contact.image=new File([imageSrc],{type:'image/jpg'});
     const metadata=contact;
     try {
@@ -21,7 +21,7 @@ const UploadImg = ({contact, imageSrc}) => {
     }
     const result = await client.store(metadata);
     const account = await web3.eth.getAccounts();
-  
+
     contract.methods.mintNFT(result.ipnft,contact.price).send({from:account[0]})
     .on('transactionHash',(hash)=>{
       metadata.image=imageSrc;
@@ -36,13 +36,12 @@ const UploadImg = ({contact, imageSrc}) => {
         console.log(res);
       }).catch(err=>{
         console.log(err);
-      })
+      });
 
     })
     .on('error',(e)=>{
       console.log(e);
     })
-    
   };
 
   return (

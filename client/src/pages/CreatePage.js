@@ -1,6 +1,7 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useContext } from 'react'
 import Header from '../components/Header';
 import NftCard from '../components/NftCard'
+import { AppContext } from '../App';
 import axios from 'axios'
 
 //IPFS 를 사용하는법
@@ -11,21 +12,17 @@ import axios from 'axios'
 
 //nft.strorage 를 이용해서 만드는 방법.
 
-function CreatePage({handleWalletClick, account}) {
-
+function CreatePage({handleWalletClick}) {
+  const context = useContext(AppContext)
+  console.log(context)
   return (
     <>
       <Header handleWalletClick={handleWalletClick}/>
-      <div style={{display: "flex", flexDirection:"column", justifyContent: "center", alignItems:"center", marginTop:"130px" }}>
-        <NftCard />
-        <span style={
-            {
-              fontFamily: "Poppins",
-              color:"#FFFFFF",
-              fontSize:"24px",
-              textAlign:"center",
-            }}>현재 당신의 계정은<br/>{account}
+      <div style={{display: "flex", flexDirection:"column", justifyContent: "center", alignItems:"center", marginTop:"130px", marginBottom:"100px" }}>
+        <span style={{color:"#FFFFFF", fontSize:"24px", textAlign:"center", paddingBottom: "5vw"}}>현재 당신의 계정은<br/>
+          <p style={{fontSize:"16px", paddingTop:"32px"}}>{context.account}</p>
         </span>
+        <NftCard />
       </div>
     </>
   )
