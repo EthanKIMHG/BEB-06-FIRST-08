@@ -1,4 +1,4 @@
-import react, {useState, useEffect} from 'react';
+import react, {useState, useEffect, useContext, createContext} from 'react';
 import MainPage from './pages/MainPage';
 import { Routes, Route } from "react-router-dom";
 import CreatePage from './pages/CreatePage';
@@ -7,12 +7,15 @@ import axios from "axios"
 
 // MainPage에 넘겨줄 db list
 // 여기에 만들면, page별로 다 뿌릴 수 있다.
+export const AppContext = createContext();
 
 function App() {
 
   //연결된 account의 주소값.
   const [account, setAccount] = useState('')
   const [collectionList, setCollectionList] = useState([]);
+
+  const context = {account: account, collectionList: collectionList}
   // const [web3, setWeb3] = useState();
 
 
@@ -47,16 +50,12 @@ function App() {
 
 
   return (
-    <Routes>
-      <Route path='/'element={
-        <MainPage
-          handleWalletClick={handleWalletClick}
-          account={account}
-          collectionList={collectionList}
-        />
-      }/>
-      <Route path='/create' element={<CreatePage handleWalletClick={handleWalletClick} account={account}/>} />
-    </Routes>
+    <AppContext.Provider value={context}>
+      <Routes>
+        <Route path='/'element={ <MainPage handleWalletClick={handleWalletClick}/>}/>
+        <Route path='/create' element={<CreatePage handleWalletClick={handleWalletClick}/>}/>
+      </Routes>
+    </AppContext.Provider>
   )
 }
 

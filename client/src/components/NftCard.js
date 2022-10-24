@@ -1,15 +1,13 @@
 import { useState } from 'react';
 import Card from 'react-bootstrap/Card';
 import Form from 'react-bootstrap/Form';
-import { BsAlignCenter } from 'react-icons/bs';
 import UploadImg from "./UploadImg"
 
+
 function KitchenSinkExample() {
-
   const [imageSrc, setImageSrc] = useState('');
-  const [contact, setContact]= useState('')
+  const [contact, setContact]= useState('');
 
-  console.log(contact)
   const encodeFileToBase64 = (fileBlob) => {
     const reader = new FileReader();
     reader.readAsDataURL(fileBlob);
@@ -31,8 +29,8 @@ function KitchenSinkExample() {
 
   return (
     <div style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
-      <Card style={{width:"22vw", border: "none", marginBottom: "50px"}}>
-        <Card.Img variant="top" src={imageSrc} style={{width: "100%",height: "300px"}}/> {/* url이겠지요?? */}
+      <Card style={{width:"22vw", border: "none", marginTop:"-20px", width:"auto", height:"auto"}}>
+        <Card.Img variant="top" src={imageSrc} style={{width: "auto%",height: "350px" }}/> {/* url이겠지요?? */}
         <Card.Body>
           <Card.Title style={{color: "#c8508b"}}>
             여러분의 NFT를 직접 만드세요!
@@ -40,7 +38,7 @@ function KitchenSinkExample() {
         </Card.Body>
         <Form style={{padding: "0px 10px"}}>
           <Form.Group className="mb-3" controlId='exampleForm.ControlInput1' onChange={handleFormChange}>
-            <Form.Label>Email address</Form.Label>
+            <Form.Label>NFT 속성</Form.Label>
             {/* <Form.Control name="id" type='text' placeholder='id' ></Form.Control> */}
             <Form.Control name="name" type='text' placeholder='name' ></Form.Control>
             {/* <Form.Control name="creator" type='text' placeholder='creator'></Form.Control>
