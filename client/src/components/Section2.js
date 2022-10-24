@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import "../utils/Section2.css"
 import Collections from './Section2Collections'
 import InfoList from './Section2InfoList'
+import { AppContext } from '../App'
 
-function Section2({collectionList}) {
+function Section2() {
+  const context = useContext(AppContext);
+  console.log(context)
 
   return (
     <div className="section-2">
