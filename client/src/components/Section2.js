@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, {useContext} from 'react'
 import "../utils/Section2.css"
 import Collections from './Section2Collections'
 import InfoList from './Section2InfoList'
@@ -39,7 +39,7 @@ function Section2() {
                   <ul className="section2-nav-collections "direction="horizontal">
                     <div className='section2-nav-collections-wrapper'>
                       <li className='nav-collection-list'>
-                        <a className='nav-collection-only'>Collections</a>
+                        <span className='nav-collection-only'>Collections</span>
                       </li>
                     </div>
                   </ul>
@@ -56,11 +56,11 @@ function Section2() {
                       </button>
                     </div>
                     <div className="fresnel-container fresnel-greaterThanOrEqual-lg nav-view">
-                      <a className="view-all">
+                      <span className="view-all">
                         <button type="button" className='view-button'>
                         <span>View all</span>
                         </button>
-                      </a>
+                      </span>
                     </div>
                   </div>
                 </div>

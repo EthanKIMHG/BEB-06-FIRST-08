@@ -2,6 +2,7 @@ import React, { useState, useContext, useEffect } from 'react'
 import Header from '../components/Header';
 import NftCard from '../components/NftCard'
 import { AppContext } from '../AppContext'
+import Footer from "../components/Footer"
 import axios from 'axios'
 
 //IPFS 를 사용하는법
@@ -31,6 +32,7 @@ function CreatePage() {
         </span>
         <NftCard />
       </div>
+      <Footer />
     </>
   )
 }
