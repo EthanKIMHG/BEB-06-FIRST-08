@@ -12,8 +12,10 @@ function Section2() {
   // 일정 시간마다 화면에 호출하는 collections를 조절.
 
   const changeCollection = [...collections]
+
   const collectionLeft =[...changeCollection].slice(0,5);
   const collectionRight=[...changeCollection].slice(5,10);
+
   
 
    // promise 써서 한번 해봐도 좋을듯 .

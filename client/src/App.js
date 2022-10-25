@@ -7,7 +7,7 @@ import Web3 from 'web3';
 import axios from "axios"
 import { AppContext } from './AppContext';
 import {NFTStorage,File} from 'nft.storage';
-import abi from './abi.json';
+import abi from './abi/abi.json';
 
 
 // MainPage에 넘겨줄 db list

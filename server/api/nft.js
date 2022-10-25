@@ -8,9 +8,9 @@ const nftload=(req,res)=>{
     });
 };
 const mint=(req,res)=>{
-    const data=req.body;
+    const {name,account,price,url,description,attribute,image} = req.body;
     const sql="insert into nft(name,creator,holder,price,url,description,attribute,image) values (?)";
-    const values =[data.name,data.account,data.account,data.price,data.url,data.description,data.attribute,data.image];
+    const values =[name,account,account,price,url,description,attribute,image];
     conn.query(sql,[values],(err,result)=>{
         if(err) console.log(err);
         console.log('데이터 저장 성공');
