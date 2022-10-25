@@ -11,7 +11,7 @@ function Section2() {
   // 일정 시간마다 화면에 호출하는 collections를 조절.
 
   const changeCollection = [...collections]
-  const [collectionLeft, setCollectionLeft] = useState([...changeCollection].slice(0,5));
+  const collectionLeft= [...changeCollection].slice(0,5);
   const [collectionRight, setCollectionRight] =useState([...changeCollection].slice(5,10));
   
 
