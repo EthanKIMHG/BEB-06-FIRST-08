@@ -46,7 +46,7 @@ function Collections({number, price, holder, imageUrl}) {
               <div className='fresnel-container fresnel-greaterThanOrEqual-md'>
                 <span className='value-only'>
                   <div className='value-eth'>
-                    {price}
+                    {price} ETH
                   </div>
                 </span>
               </div>

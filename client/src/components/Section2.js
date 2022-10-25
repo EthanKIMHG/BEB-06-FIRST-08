@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import "../utils/Section2.css"
 import Collections from './Section2Collections'
 import InfoList from './Section2InfoList'
@@ -7,9 +7,25 @@ import { AppContext } from '../AppContext'
 function Section2() {
   const context = useContext(AppContext);
   const collections = context.state.collectionList;
-  const collectionLeft = [...collections].slice(0,5);
-  const collectionRight = [...collections].slice(5,10);
   
+  // 일정 시간마다 화면에 호출하는 collections를 조절.
+
+  const changeCollection = [...collections]
+  const [collectionLeft, setCollectionLeft] = useState([...changeCollection].slice(0,5));
+  const [collectionRight, setCollectionRight] =useState([...changeCollection].slice(5,10));
+  
+
+   // promise 써서 한번 해봐도 좋을듯 .
+/*   useEffect(() => {
+    setTimeout( async () => {
+      try {
+        await setCollectionLeft([...changeCollection].slice(10,15));
+        await setCollectionRight([...changeCollection].slice(15,20));
+      } catch(e) {
+        return e
+      }
+    },2000)
+  },[collectionLeft]) */
 
   return (
     <div className="section-2">
@@ -61,11 +77,6 @@ function Section2() {
                     price={item.price}
                     />)
                   })}
-{/*                   <Collections className="collection-item1" number="1" url="" title="" value="" holder=""/>  
-                  <Collections className="collection-item2" number="2" url="" title="" value="" holder=""/>  
-                  <Collections className="collection-item3" number="3" url="" title="" value="" holder=""/>  
-                  <Collections className="collection-item4" number="4" url="" title="" value="" holder=""/>  
-                  <Collections className="collection-item5" number="5" url="" title="" value="" holder=""/> */}  
                 </div>
               </div>
             </div>

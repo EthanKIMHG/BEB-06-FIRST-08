@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react'
+import React, { useState, useContext, useEffect } from 'react'
 import Header from '../components/Header';
 import NftCard from '../components/NftCard'
 import { AppContext } from '../AppContext'
@@ -13,14 +13,21 @@ import axios from 'axios'
 //nft.strorage 를 이용해서 만드는 방법.
 
 function CreatePage() {
-  const context = useContext(AppContext)
-
+  const context = useContext(AppContext);
+  const {account} = context.state;
+  const {handleWalletClick} = context.action;
+  useEffect(() => {
+    if (!account) {
+      handleWalletClick();
+    }
+  },[])
+  
   return (
     <>
       <Header />
       <div style={{display: "flex", flexDirection:"column", justifyContent: "center", alignItems:"center", marginTop:"130px", marginBottom:"100px" }}>
-        <span style={{color:"#FFFFFF", fontSize:"24px", textAlign:"center", paddingBottom: "5vw"}}>현재 당신의 계정은<br/>
-          <p style={{fontSize:"16px", paddingTop:"32px"}}>{context.state.account}</p>
+        <span style={{color:"#FFFFFF", fontSize:"25px", textAlign:"center", paddingBottom: "5vw"}}>현재 당신의 계정은<br/>
+          <p style={{fontSize:"18px", paddingTop:"32px"}}>{(context.state.account ? context.state.account : '계정을 연결하세요.')}</p>
         </span>
         <NftCard />
       </div>
