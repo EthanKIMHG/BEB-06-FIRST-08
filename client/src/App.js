@@ -59,7 +59,8 @@ function App() {
     .then(res => {
       const data =res.data.data;
       setCollectionList(data);
-    }).catch(e => {console.log(e)})
+    })
+    .catch(e => {console.log(e)})
   },[])
 
   //wallet connect 기능

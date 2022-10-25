@@ -11,7 +11,7 @@ import axios from 'axios'
 function Header() {
   const [address, setAddress] = useState('');
   const context = useContext(AppContext);
-  console.log(context)
+  console.log(context.action)
   //const [nftList, setNftList] = useState([]);
   // 처음 렌더링 될때만 실행하게끔. DB에서 데이터를 불러온다.
   /*   useEffect((req, res) => {

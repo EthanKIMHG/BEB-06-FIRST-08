@@ -13,7 +13,6 @@ const UploadImg = ({contact, imageSrc}) => {
   const context = useContext(AppContext);
 
   const {web3, contract, client} = context.state;
-  console.log(web3, contract, client)
 
   const [loading,setLoading] = useState(false);
 
