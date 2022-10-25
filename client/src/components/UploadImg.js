@@ -1,8 +1,6 @@
-import React, { useState, useRef, useContext } from 'react';
-import {NFTStorage,File} from 'nft.storage';
-import abi from '../abi.json';
+import React, { useState,useContext } from 'react';
+import {File} from 'nft.storage';
 import axios from 'axios';
-import Web3 from 'web3';
 import "../utils/Font.css"
 import Loading from '../Loding/Loading';
 import Swal from 'sweetalert2';
@@ -11,28 +9,36 @@ import { AppContext } from '../AppContext';
 
 const UploadImg = ({contact, imageSrc}) => {
   const context = useContext(AppContext);
-
-  const {web3, contract, client} = context.state;
-
+  const {account, contract, client} = context.state;
   const [loading,setLoading] = useState(false);
-
   const handleImagebutton = async() => {
-    setLoading(true);
+    if(!account){
+      Swal.fire({
+        title: '메타마스크 연결을 확인해주세요.',
+        showClass: {
+          popup: 'animate__animated animate__fadeInDown'
+        },
+        hideClass: {
+          popup: 'animate__animated animate__fadeOutUp'
+        }
+      })
+    }
+    else{
+      setLoading(true);
     contact.image=new File([imageSrc],{type:'image/jpg'});
     const metadata=contact;
-    try {
-      await window.ethereum.request({ method: 'eth_requestAccounts' });
-    } catch(error) {
-      console.error(error);
-    }
+    // try {
+    //   await window.ethereum.request({ method: 'eth_requestAccounts' });
+    // } catch(error) {
+    //   console.error(error);
+    // }
 
     const result = await client.store(metadata);
-    const account = await web3.eth.getAccounts(); // useContext에 추가되게 한번 구현해보자.
-
-    contract.methods.mintNFT(result.ipnft,contact.price).send({from:account[0]})
+    // const account = await web3.eth.getAccounts(); // useContext에 추가되게 한번 구현해보자.
+    contract.methods.mintNFT(result.ipnft,contact.price).send({from:account})
     .on('transactionHash',(hash)=>{
       metadata.image=imageSrc;
-      metadata.account=account[0];
+      metadata.account=account;
       metadata.url = result.url;
       axios.post('http://localhost:5001/call/mint',JSON.stringify(metadata),{
         headers:{
@@ -40,14 +46,13 @@ const UploadImg = ({contact, imageSrc}) => {
         },
       })
       .then((res)=>{
-        console.log(res);
         setLoading(false);
         Swal.fire({
           position: 'top-end',
           icon: 'success',
           title: 'Your work has been saved',
           showConfirmButton: false,
-          timer: 3000
+          timer: 10000
         })
         window.location.replace("/create");
       }).catch(err=>{
@@ -58,6 +63,8 @@ const UploadImg = ({contact, imageSrc}) => {
     .on('error',(e)=>{
       console.log(e);
     })
+    }
+    
   };
 
   return (

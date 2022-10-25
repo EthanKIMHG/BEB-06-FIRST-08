@@ -8,9 +8,6 @@ const conn= mysql.createConnection({
     password:process.env.PASSWORD,
     database:'nft'
 });
-// conn.connect((err)=>{
-//     if(err) throw err;
-// })
 
 module.exports={conn};
 

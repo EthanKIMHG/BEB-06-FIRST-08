@@ -15,7 +15,7 @@ function Footer() {
               <div className="mailing-signup-container">
                 <div className="mailing-signup-area">
                   <div className="mailing-signup-input">
-                    <input className='signup-input' value={""}></input>
+                    <input className='signup-input' defaultValue={""}></input>
                   </div>
                 </div>
                 <button className="mailing-signup-button" height="50px" width="162px" type="button">Sign up</button>

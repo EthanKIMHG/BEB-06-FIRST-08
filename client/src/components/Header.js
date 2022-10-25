@@ -1,4 +1,5 @@
-import React, { useState, useContext } from 'react'
+
+import React, { useState,useContext } from 'react'
 import { VscAccount as AccountIcon } from "react-icons/vsc";
 import { BsWallet2 as WalletIcon } from "react-icons/bs";
 import { BsCart as CartIcon } from "react-icons/bs";
@@ -10,7 +11,6 @@ import { AppContext } from '../AppContext';
 function Header() {
   const [address, setAddress] = useState('');
   const context = useContext(AppContext);
-  console.log(context.action)
   //const [nftList, setNftList] = useState([]);
   // 처음 렌더링 될때만 실행하게끔. DB에서 데이터를 불러온다.
   /*   useEffect((req, res) => {
@@ -65,7 +65,7 @@ function Header() {
                     <div className="search-container" style={{ height: "72px,45px" }}>
                       <form className="search-wrapper" aria-expanded="false" aria-controls="NavSearch--results" role="combobox" onSubmit={handleSubmit}>
                         <BsSearch className='search-icon' size={"19px"} />
-                        <input aria-label={"Search Opensea"} aria-multiline={false} className='search-input' placeholder="Search items, collections, and accounts" role="searchbox" type="search" value={address} onChange={handleChange} />
+                        <input aria-label={"Search Opensea"} aria-multiline={false} className='search-input' placeholder="Search items, collections, and accounts" role="searchbox" type="search" defaultValue={address} onChange={handleChange} />
                       </form>
                     </div>
                   </div>
@@ -122,10 +122,10 @@ function Header() {
                 <div className="fresnel-container fresnel-lessThan-lg "></div>
               </div>
             </div>
-            <div class="fresnel-container fresnel-between-lg-xl "></div>
-            <div class="fresnel-container fresnel-between-sm-lg "></div>
+            <div className="fresnel-container fresnel-between-lg-xl "></div>
+            <div className="fresnel-container fresnel-between-sm-lg "></div>
             <li>
-              <div class="fresnel-container fresnel-lessThan-sm "></div>
+              <div className="fresnel-container fresnel-lessThan-sm "></div>
             </li>
           </ul>
         </nav>

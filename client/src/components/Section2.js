@@ -1,4 +1,4 @@
-import React, {useContext} from 'react'
+import React, { useContext} from 'react'
 import "../utils/Section2.css"
 import Collections from './Section2Collections'
 import InfoList from './Section2InfoList'
@@ -10,10 +10,11 @@ function Section2() {
   const collections = context.state.collectionList;
   
   // 일정 시간마다 화면에 호출하는 collections를 조절.
-
   const changeCollection = [...collections]
+  changeCollection.sort(()=> Math.random() - 0.5); // 무작위 섞기
   const collectionLeft =[...changeCollection].slice(0,5);
   const collectionRight=[...changeCollection].slice(5,10);
+
   
 
    // promise 써서 한번 해봐도 좋을듯 .
@@ -39,7 +40,7 @@ function Section2() {
                   <ul className="section2-nav-collections "direction="horizontal">
                     <div className='section2-nav-collections-wrapper'>
                       <li className='nav-collection-list'>
-                        <span className='nav-collection-only'>Collections</span>
+                        <a href="#!" className='nav-collection-only'>Collections</a>
                       </li>
                     </div>
                   </ul>
@@ -56,7 +57,7 @@ function Section2() {
                       </button>
                     </div>
                     <div className="fresnel-container fresnel-greaterThanOrEqual-lg nav-view">
-                      <span className="view-all">
+                      <a href="#!" className="view-all">
                         <button type="button" className='view-button'>
                         <span>View all</span>
                         </button>
