@@ -20,7 +20,7 @@ function CreatePage() {
     if (!account) {
       handleWalletClick();
     }
-  },[])
+  });
   
   return (
     <>
