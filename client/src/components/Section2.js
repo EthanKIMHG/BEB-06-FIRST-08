@@ -61,7 +61,7 @@ function Section2() {
                         <button type="button" className='view-button'>
                         <span>View all</span>
                         </button>
-                      </a>
+                      </span>
                     </div>
                   </div>
                 </div>

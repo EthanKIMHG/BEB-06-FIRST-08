@@ -2,7 +2,7 @@ import React from 'react'
 
 function Collections({number, price, holder, imageUrl}) {
   return (
-      <a className="item">
+      <a className="item" href="/">
         <div className='item-container'>
           <div className='fresnel-container fresnel-lessThan-sm'></div>
           <div className='fresnel-container fresnel-greaterThanOrEqual-sm'>
@@ -16,7 +16,7 @@ function Collections({number, price, holder, imageUrl}) {
             <div className='item-image-container'>
               <div className='item-image-wrapper'>
                 <span className='item-image'>
-                  <img className='item-image-only' src={imageUrl} />
+                  <img className='item-image-only' src={imageUrl} alt=""/>
                 </span>
               </div>
               <div className="item-title-container">

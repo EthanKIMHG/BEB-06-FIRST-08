@@ -1,3 +1,4 @@
+
 import React, { useState,useContext } from 'react'
 import { VscAccount as AccountIcon } from "react-icons/vsc";
 import { BsWallet2 as WalletIcon } from "react-icons/bs";
@@ -6,7 +7,6 @@ import { BsSearch } from "react-icons/bs";
 import "../utils/Header.css"
 import { NavLink } from 'react-router-dom';
 import { AppContext } from '../AppContext';
-
 
 function Header() {
   const [address, setAddress] = useState('');
@@ -76,24 +76,24 @@ function Header() {
           <ul className="nav-link">
             <div className="fresnel-container fresnel-greaterThanOrEqual-xl">
               <div className="link-wrapper">
-                <li className="link-wrapper-explore" aria-expanded="false">
-                  <a className="explore-link" href="/explore-collections">Explore</a>
+                <li className="link-wrapper-explore">
+                  <span className="explore-link" >Explore</span>
                 </li>
-                <li className="link-wrapper-stats" aria-expanded={false}>
-                  <a className="stats-link" href="/explore-collections">Stats</a>
+                <li className="link-wrapper-stats">
+                  <span className="stats-link" >Stats</span>
                 </li>
-                <li className="link-wrapper-resources" aria-expanded={false}>
-                  <a className="resources-link" href="/explore-collections">Resources</a>
+                <li className="link-wrapper-resources">
+                  <span className="resources-link" >Resources</span>
                 </li>
-                <li className="link-wrapper-create" aria-expanded={false}>
-                  <NavLink to="/create" className="create-link" href="/explore-collections">Create</NavLink>
+                <li className="link-wrapper-create" >
+                  <NavLink to="/create" className="create-link" >Create</NavLink>
                 </li>
               </div>
             </div>
             <div className='fresnel-container fresnel-greaterThanOrEqual-lg'>
               <div className="icon-wrapper">
                 <div className="icon-block-account">
-                  <li className="account-wrapper" aria-expanded="false">
+                  <li className="account-wrapper">
                     <NavLink to="/account" className="account-link">
                       <AccountIcon className="nav-icon-account" size="32" title="Account" value="account_circle" />
                     </NavLink>
