@@ -3,6 +3,7 @@ import "../utils/Section2.css"
 import Collections from './Section2Collections'
 import InfoList from './Section2InfoList'
 import { AppContext } from '../AppContext'
+import { MdKeyboardArrowDown } from "react-icons/md";
 
 function Section2() {
   const context = useContext(AppContext);
@@ -11,8 +12,10 @@ function Section2() {
   // 일정 시간마다 화면에 호출하는 collections를 조절.
 
   const changeCollection = [...collections]
-  const collectionLeft= [...changeCollection].slice(0,5);
-  const [collectionRight, setCollectionRight] =useState([...changeCollection].slice(5,10));
+
+  const collectionLeft =[...changeCollection].slice(0,5);
+  const collectionRight=[...changeCollection].slice(5,10);
+
   
 
    // promise 써서 한번 해봐도 좋을듯 .
@@ -35,29 +38,32 @@ function Section2() {
             <div className="section2-nav-container">
               <nav className="section2-nav">
                 <div className='section2-nav-space'>
-                  <ul direction="horizontal">
-                    <div>
-                      <li>Trending</li>
-                      <li>Top</li>
+                  <ul className="section2-nav-collections "direction="horizontal">
+                    <div className='section2-nav-collections-wrapper'>
+                      <li className='nav-collection-list'>
+                        <a className='nav-collection-only'>Collections</a>
+                      </li>
                     </div>
                   </ul>
                   <div className="hours-and-view">
-                    <button>
-                      <input type="hidden" value="24h" />
-                      <div className="hours-options">
-                        <span className="hours-chosen"></span>
-                      </div>
-                      <div className="arrow-down">
-                        <i cursor="pointer" value="keyboard_arrow_down" size="24">keyboard_arrow_down</i>
-                      </div>
-                    </button>
-                  </div>
-                  <div className="view-all">
-                    <a href="/rankings" className="">
-                      <button type="button" name="button">
-                        <span>View all</span>
+                    <div className="nav-hours">
+                      <button className='hours'>
+                        <input type="hidden" value="24h" />
+                        <div className="hours-options">
+                          <span className="hours-chosen">24h</span>
+                        </div>
+                        <div className="arrow-down">
+                          <MdKeyboardArrowDown cursor="pointer"size="24" />
+                        </div>
                       </button>
-                    </a>
+                    </div>
+                    <div className="fresnel-container fresnel-greaterThanOrEqual-lg nav-view">
+                      <a className="view-all">
+                        <button type="button" className='view-button'>
+                        <span>View all</span>
+                        </button>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </nav>

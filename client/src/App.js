@@ -6,7 +6,6 @@ import AccountPage from './pages/AccountPage';
 import Web3 from 'web3';
 import axios from "axios"
 import { AppContext } from './AppContext';
-
 import {NFTStorage,File} from 'nft.storage';
 import abi from './abi/abi.json';
 
