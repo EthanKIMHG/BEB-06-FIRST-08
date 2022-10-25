@@ -47,7 +47,7 @@ const UploadImg = ({contact, imageSrc}) => {
           icon: 'success',
           title: 'Your work has been saved',
           showConfirmButton: false,
-          timer: 3000
+          timer: 10000
         })
         window.location.replace("/create");
       }).catch(err=>{

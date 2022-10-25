@@ -1,4 +1,3 @@
-const {nftupload} =require("./api/nftupload.js")
 const express = require("express");
 const cors = require("cors");
 const path =require("path");
@@ -18,6 +17,5 @@ app.get("*",(req,rep)=>{
     rep.sendFile("/Users/gimhyeongu/Desktop/project/BEB-06-FIRST-08/client/build/index.html");
 });
 //path.join("../client/","build/index.html")
-nftupload();
 //라우터
 require("./routes/routes.js")(app);
