@@ -13,7 +13,7 @@ function Footer() {
             <div className="mailing-signup-container">
               <div className="mailing-signup-area">
                 <div className="mailing-signup-input">
-                  <input aria-invalid="false" style="cursor:text" placeholder="Your email address" name="email" value="">
+                  <input aria-invalid="false" style={{cursor:"text"}} placeholder="Your email address" name="email" value="">
                   </input></div>
               </div>
               <button className="MailingSignupForm--button" height="50px" width="162px" type="button">Sign up</button>
@@ -24,42 +24,42 @@ function Footer() {
           <div className="footer-header">Join the community</div>
           <div className="social-buttons">
             {/* Twitter */}
-            <a className="" href="https://twitter.com/opensea" rel="nofollow noopener" target="_blank">
+            <a className="" href="https://twitter.com/opensea" rel="nofollow noopener" >
               <button aria-label="Twitter Official" className="Footer--social-button" type="button">
                 <div className="">
-                  <svg className="" fill="#FFFFFF" style="height:20px;width:30px" viewBox="0 0 18 16"></svg>
+                  <svg className="" fill="#FFFFFF" style={{height: "20px", width:"30px"}}viewBox="0 0 18 16"></svg>
                 </div>
               </button>
             </a>
             {/* Instagram */}
-            <a className="" href="https://www.instagram.com/opensea/" rel="nofollow noopener" target="_blank">
+            <a className="" href="https://www.instagram.com/opensea/" rel="nofollow noopener" >
               <button aria-label="Instagram" className="Footer--social-button" type="button">
                 <div className="">
-                  <svg className="" fill="#FFFFFF" style="height:20px;width:30px" viewBox="0 0 24 24"></svg>
+                  <svg className="" fill="#FFFFFF" style={{height: "20px", width:"30px"}} viewBox="0 0 24 24"></svg>
                 </div>
               </button>
             </a>
             {/* Discord */}
-            <a className="" href="https://discord.gg/opensea" rel="nofollow noopener" target="_blank">
+            <a className="" href="https://discord.gg/opensea" >
               <button aria-label="Discord" className="Footer--social-button" type="button">
                 <div className="">
-                  <svg className="" fill="#FFFFFF" style="height:20px;width:30px" viewBox="0 0 22 16"></svg>
+                  <svg className="" fill="#FFFFFF" style={{height: "20px", width:"30px"}} viewBox="0 0 22 16"></svg>
                 </div>
               </button>
             </a>
             {/* Reddit */}
-            <a className="" href="https://reddit.com/r/opensea" rel="nofollow noopener" target="_blank">
+            <a className="" href="https://reddit.com/r/opensea" >
               <button aria-label="Reddit" className="Footer--social-button" type="button">
                 <div className="sc-29427738-0 sc-630fc9ab-0 sc-53d45fdb-0 dVNeWL jSPhMX gIzYhv">
-                  <svg className="" fill="#FFFFFF" style="height:20px;width:30px" viewBox="0 0 24 24"></svg>
+                  <svg className="" fill="#FFFFFF" style={{height: "20px", width:"30px"}} viewBox="0 0 24 24"></svg>
                 </div>
               </button>
             </a>
             {/* YouTube */}
-            <a className="sc-1f719d57-0 fKAlPV" href="https://www.youtube.com/c/OpenSeaTV" rel="nofollow noopener" target="_blank">
+            <a className="sc-1f719d57-0 fKAlPV" href="https://www.youtube.com/c/OpenSeaTV" >
               <button aria-label="YouTube" className="sc-29427738-0 sc-ebeca040-0 nFISH kWIWry Footer--social-button" type="button">
                 <div className="sc-29427738-0 sc-630fc9ab-0 sc-53d45fdb-0 dVNeWL jSPhMX gIzYhv">
-                  <svg className="" fill="#FFFFFF" style="height:20px;width:30px" viewBox="0 0 20 18"></svg>
+                  <svg className="" fill="#FFFFFF" style={{height: "20px", width:"30px"}} viewBox="0 0 20 18"></svg>
                 </div>
               </button>
             </a>
@@ -67,7 +67,7 @@ function Footer() {
             <a className="" href="https://www.tiktok.com/@opensea?lang=en" rel="nofollow noopener" target="_blank">
               <button aria-label="TikTok" className="sc-29427738-0 sc-ebeca040-0 nFISH kWIWry Footer--social-button" type="button">
                 <div className="sc-29427738-0 sc-630fc9ab-0 sc-53d45fdb-0 dVNeWL jSPhMX gIzYhv">
-                  <svg className="" fill="#FFFFFF" style="height:20px;width:30px" viewBox="0 0 2859 3333"></svg>
+                  <svg className="" fill="#FFFFFF" style={{height: "20px", width:"30px"}} viewBox="0 0 2859 3333"></svg>
                 </div>
               </button>
             </a>
@@ -75,7 +75,7 @@ function Footer() {
             <a className="" href="https://opensea.io/blog/newsletter/" rel="nofollow noopener" target="_blank">
               <button aria-label="Mail" className="Footer--social-button" type="button">
                 <div className="">
-                  <i color="white" size="30" value="mail" className="material-icons-outlined">mail</i>
+                  <i style={{color: "white", size:"30px"}}value="mail" className="material-icons-outlined">mail</i>
                 </div>
               </button>
             </a>
@@ -86,18 +86,15 @@ function Footer() {
       <div className="footer-row">
         <div className="footer-column footer-one-quarter">
           {/* Logo (boat) */}
-          <span style="box-sizing:border-box;display:inline-block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:relative;max-width:100%">
-            <span style="box-sizing:border-box;display:block;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;max-width:100%">
-              <img style="display:block;max-width:100%;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0" alt="" aria-hidden="true"
+          <span className='footer-span1' >
+            <span className='footer-span2' >
+              <img className='footer-image'
                 src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2744%27%20height=%2744%27/%3e">
-              </img></span>
-            <img alt="Logo" src="https://opensea.io/static/images/logos/opensea-white.svg" decoding="async" data-nimg="intrinsic"
-              style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%">
-              <noscript>
-                <img alt="Logo" src="https://opensea.io/static/images/logos/opensea-white.svg" decoding="async" data-nimg="intrinsic"
-                  style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%" loading="lazy" />
-              </noscript>
-            </img></span>
+              </img>
+            </span>
+            <img className='footer-logo' alt="Logo" src="https://opensea.io/static/images/logos/opensea-white.svg" decoding="async" data-nimg="intrinsic" />
+            <img className='footer-logo2' alt="Logo" src="https://opensea.io/static/images/logos/opensea-white.svg" decoding="async" data-nimg="intrinsic" />
+            </span>
           {/* Name (OpenSea) */}
           <a className="Footer--section-header" href="https://opensea.io" rel="nofollow noopener" target="_blank">OpenSea</a>
           {/* Description */}

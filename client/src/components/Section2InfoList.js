@@ -2,7 +2,7 @@ import React from 'react'
 
 function InfoList() {
   return (
-    <div className="collection-right-info">
+    <div className="collection-info">
       <div className="collection-right-1">
         <span color="text.subtle">COLLECTION</span>
       </div>
