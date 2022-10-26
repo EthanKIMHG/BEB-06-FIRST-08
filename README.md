@@ -1,4 +1,5 @@
-< img  src = " https://img.shields.io/badge/Nods.js-339933?style=flat-square&logo=nodejs&logoColor=black" / >
+
+<img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=node.js&logoColor=black"/>
 # BEB-06-FIRST-08
 - Stack: JavaScript, React, CSS, Web3, Axios, Node, Express, MySQL
 
