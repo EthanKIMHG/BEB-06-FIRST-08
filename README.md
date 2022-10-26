@@ -1,6 +1,6 @@
 
 # BEB-06-Angry-Cactus
-# 🕵🏼 어떤 기술이 사용되었나요? <br>
+## 🕵🏼 어떤 기술이 사용되었나요? <br>
 <div><img src="https://img.shields.io/badge/Express-000000?style=flat-square&logo=express&logoColor=white"/> <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=node.js&logoColor=white"/> <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black"/> <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white"/> <img src="https://img.shields.io/badge/Web3.js-F16822?style=flat-square&logo=web3.js&logoColor=black"/> <img src="https://img.shields.io/badge/IPFS-65C2CB?style=flat-square&logo=ipfs&logoColor=white"/> <img src="https://img.shields.io/badge/Bootstrap-7952B3?style=flat-square&logo=bootstrap&logoColor=black"/> <img src="https://img.shields.io/badge/RactRouter-CA4245?style=flat-square&logo=reactRouter&logoColor=black"/></div>
 
 
@@ -38,7 +38,52 @@
 <img width="800" alt="Data Flow Diagram" src="https://user-images.githubusercontent.com/97439643/197947754-e00160b3-53bd-44e5-be73-4c6836441cc8.png">
 
 
+## 🗣 우리를 소개합니다.
+<table>
+  <tbody>
+     <tr>
+      <td align="center">
+        <a href="https://github.com/sokim1616">
+          <sub>
+            <b>박하늘</b>
+          </sub>
+        </a>
+        <br>
+      </td>
+      <td>
+        <strong>🚩 Frontend</strong>
+      </td>
+    </tr>
+      <td align="center">
+        <a href="https://github.com/bombamong">
+          <sub>
+            <b>김현구</b>
+          </sub>
+        </a>
+        <br>
+      </td>
+      <td>
+        <strong>🚩 Frontend</strong>
+      </td>
+    </tr>
+    <tr>
+      <td align="center">
+        <a href="https://github.com/Kyung-Douhyun">
+          <sub>
+            <b>신승훈</b>
+          </sub>
+        </a>
+        <br>
+      </td>
+      <td>
+        <strong>🏁 Full Stack</strong>
+      </td>
+    </tr>
+    <tr>
+  </tbody>
+</table>
 
+# For project details
 
-2. Readme file ex) 전체적인 아키텍쳐, Todo List 와 비교해서, 작성.
+### [checkout WIKI](https://github.com/codestates-beb/BEB-06-Angry-Cactus/wiki)
 
