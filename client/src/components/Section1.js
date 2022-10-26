@@ -5,7 +5,7 @@ function Section1() {
   return (
     <div className="section-1">
       <div className='fresnel-container fresnel-greaterThanOrEqual-sm'>
-        <div className="section1-container"> {/*grid가 이미 적용.*/}
+        <div className="section1-container"> 
           <div className='section1-container2'>
             <div className="fresnel-container fresnel-greaterThanOrEqual-sm">
               <div className="section1-wrapper">
