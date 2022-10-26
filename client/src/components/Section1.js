@@ -20,9 +20,9 @@ function Section1() {
               <div className='background-container'>
                 <div className='background-wrapper'>
                   <div className='background-row'>
-                    <img src="https://images.pexels.com/photos/1703317/pexels-photo-1703317.jpeg?auto=compress&cs=tinysrgb&w=1600"/>
-                    <img src="https://w0.peakpx.com/wallpaper/652/786/HD-wallpaper-arid-desert-landscape-at-twilight-sky-clouds-cactus-twilight-deserts-sunsets-nature.jpg" />
-                    <img src="https://images.pexels.com/photos/34107/milky-way-stars-night-sky.jpg?auto=compress&cs=tinysrgb&w=1600" />
+                    <img src="https://images.pexels.com/photos/1703317/pexels-photo-1703317.jpeg?auto=compress&cs=tinysrgb&w=1600" alt=''/>
+                    <img src="https://w0.peakpx.com/wallpaper/652/786/HD-wallpaper-arid-desert-landscape-at-twilight-sky-clouds-cactus-twilight-deserts-sunsets-nature.jpg" alt=''/>
+                    <img src="https://images.pexels.com/photos/34107/milky-way-stars-night-sky.jpg?auto=compress&cs=tinysrgb&w=1600" alt=''/>
                   </div>
                 </div>
               </div>

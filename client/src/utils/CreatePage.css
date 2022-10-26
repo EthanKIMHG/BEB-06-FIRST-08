@@ -1,0 +1,55 @@
+.create-card {
+  font-family: Poppins, sans-serif;
+  line-height: 1.5;
+  font-size: 15px;
+  --swiper-theme-color: #007aff;
+  --swiper-navigation-size: 44px;
+  color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 130px;
+  margin-bottom: 100px;
+}
+
+ .create-message {
+  color: #FFFFFF;
+  font-size: 18px;
+  text-align: center;
+  padding-bottom: 5vh;
+}
+
+.create-card > p {
+  font-size: 18px;
+  padding-top: 32px;
+}
+
+.mint-button {
+
+  font-weight: 500;
+  tab-size: 3;
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  border-color: currentColor;
+  font-family: inherit;
+  line-height: inherit;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  background-size: 200% auto;
+  color: #fff;
+  border-radius: 10px;
+  display: block;
+  align-items: center;
+  width: 50%;
+  transition: .5s;
+  background-image: linear-gradient(to right, #FF4E50 0%, #F9D423  51%, #FF4E50 100%);
+}
+
+.mint-button:hover {
+  box-shadow: 0 0 30px #FFFFFF;
+}

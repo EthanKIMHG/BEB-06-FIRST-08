@@ -349,11 +349,17 @@
   margin-top: 12px;
   text-align: initial;
   cursor: pointer;
+  padding-right: 7px;
 }
 
-.footer-bottom{
+.footer-bottom {
   display: flex;
   justify-content: space-between;
+  font-size: 13px;
+}
+
+.Footer--bottom-section {
+  margin-top: 0;
   font-size: 13px;
 }
 

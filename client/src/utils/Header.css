@@ -2,8 +2,6 @@
   font-family: Poppins, sans-serif;
   line-height: 1.5;
   font-size: 15px;
-  --swiper-theme-color: #007aff;
-  --swiper-navigation-size: 44px;
   color: rgb(229, 232, 235);
   box-sizing: border-box;
   --transition-curve: cubic-bezier(0.05, 0, 0.2, 1);
@@ -25,6 +23,7 @@
   height: 100%;
   padding: 0px 72px;
 }
+
 
 /**nav START**/
 
