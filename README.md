@@ -15,7 +15,13 @@
 
 ## CreatePage
 
+<img width="800" alt="스크린샷 2022-10-26 오전 11 32 09" src="https://user-images.githubusercontent.com/97439643/197921408-3953841e-40e8-4e59-a07f-2f40c8f860de.png">
 
+## Wallet Alert
+<img width="800" alt="스크린샷 2022-10-26 오전 11 31 50" src="https://user-images.githubusercontent.com/97439643/197921443-a8409806-90e1-46ca-94ce-cc075e19140a.png">
+
+## Mint NFT
+<img width="550" alt="스크린샷 2022-10-26 오전 11 33 13" src="https://user-images.githubusercontent.com/97439643/197921502-6f11b917-14b7-43f4-981d-1e80364246a3.png">
 
 
 
