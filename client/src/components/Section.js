@@ -1,6 +1,6 @@
 import React from 'react'
 import Section1 from './Section1'
-import Section2 from './Section2'
+import Section2 from './Section2Compo/Section2'
 import "../utils/Section.css"
 
 

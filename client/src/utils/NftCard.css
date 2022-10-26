@@ -9,12 +9,18 @@
 .card {
   background-color: #4562ff;
   background-image: linear-gradient(360deg,#fcc766 0% ,  #c8508b 66%,  #4562ff 100%);
-  border-radius: 5px;
+  border-radius: 12px;
   padding-bottom: 10px;
   width: 24vw;
   border: none;
   margin-top: -20px;
   width: auto;
   height: auto;
+  transition: 0.7s;
 }
+.card:hover {
+  box-shadow: 0 0 50px #FFFFFF;
+}
+
+
 

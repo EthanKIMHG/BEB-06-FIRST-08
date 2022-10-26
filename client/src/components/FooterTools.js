@@ -11,7 +11,7 @@ const company = ['About', 'Careers', 'Ventures', 'Grants'];
 const FooterList = ({list}) => {
   return (
     <li className="Footer--link-wrapper">
-      <a className="Footer--link" >{list}</a>
+      <a className="Footer--link" href="/">{list}</a>
     </li>
   )
 }

@@ -157,10 +157,15 @@
   width: 100%;
 }
 
-img {
-
+.background-row > img {
   width: auto;
   height: auto;
   border-radius: 10px;
-  margin: 0 3px
+  margin: 0 3px;
+  transition: .5s;
+  cursor: pointer;
+}
+
+.background-row > img:hover {
+  box-shadow: 0 0 30px #FFFFFF;
 }

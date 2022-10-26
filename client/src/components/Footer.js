@@ -30,7 +30,7 @@ function Footer() {
               <DiscordIcon />
               <RedditIcon />
               <YoutubeIcon />
-              <TiktokIcon /> 
+              <TiktokIcon />
               <EnvelopeIcon />
             </div>
           </div>
@@ -65,8 +65,8 @@ function Footer() {
             <p>© 2018 - 2022 Ozone Networks, Inc</p>
           </div>
           <div className="Footer--bottom-section">
-            <span className="Footer--link" >Privacy Policy</span>
-            <span className="Footer--link" >Terms of Service</span>
+            <a className="Footer--link" href='/'>Privacy Policy</a>
+            <a className="Footer--link" href='/'>Terms of Service</a>
           </div>
         </div>
       </div>

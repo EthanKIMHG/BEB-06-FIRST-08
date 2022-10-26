@@ -1,9 +1,10 @@
 import styled from 'styled-components';
 
 export const Background = styled.div`
-    position: absolute;
-    width: 100vw;
-    height: 118vh;
+    border: 2px solid purple;
+    border-radius: 7px;
+    width: 378.5px;
+    height: 200px;
     top: 0;
     left: 0;
     background: #ffffffb7;

@@ -5,7 +5,7 @@ export const Loading =()=>{
     return(
         <Background>
             <LoadingText>잠시만 기다려 주세요.</LoadingText>
-            <img src ={Spinner} alt="로딩중" width="5%"/>
+            <img src={Spinner} alt="로딩중" style={{width: "7%"}}/>
         </Background>
     );
 };
